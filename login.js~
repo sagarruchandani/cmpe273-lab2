@@ -51,6 +51,22 @@ Login.prototype.logout = function(sessionId) {
         console.log(this.sessionMap);
 };
 
+/**
+ * Refresh SessionId
+ */
+Login.prototype.refreshSession = function(sessionId){
+
+	this.sessionId=sessionId;
+	/*var name = this.sessionMap[sessionId].name;
+	var email = this.sessionMap[sessionId].email;
+	//create new session
+    var newSessionId = this.login(name,email);
+    //delete the old session
+    this.logout(sessionId);
+    console.log('Session Refreshed');
+*/	return newSessionId;
+}
+
 
 // Export the Login class
 module.exports = new Login();
